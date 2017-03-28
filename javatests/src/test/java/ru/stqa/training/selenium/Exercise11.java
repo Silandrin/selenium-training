@@ -51,15 +51,20 @@ public class Exercise11 {
         driver.get("http://localhost/litecart/en/");
         driver.findElement(By.linkText("New customers click here")).click();
         new Select(driver.findElement(By.cssSelector("select"))).selectByVisibleText("United States");
-        driver.findElement(By.cssSelector("input[name=firstname]"))
-                .sendKeys("Firstname", Keys.TAB, "Lastname", Keys.TAB,
-                        "Address_1", Keys.TAB, Keys.TAB,
-                        "12345", Keys.TAB, "SomeCity", Keys.TAB,
-                        Keys.TAB, Keys.TAB, email, Keys.TAB, "+19876543210", Keys.TAB, Keys.SPACE, Keys.TAB,
-                        "password", Keys.TAB, "password");
+        driver.findElement(By.cssSelector("input[name=firstname]")).sendKeys("Firstname");
+        driver.findElement(By.cssSelector("input[name=lastname]")).sendKeys("Lastname");
+        driver.findElement(By.cssSelector("input[name=address1]")).sendKeys("Address_1");
+        driver.findElement(By.cssSelector("input[name=postcode]")).sendKeys("12345");
+        driver.findElement(By.cssSelector("input[name=city]")).sendKeys("SomeCity");
+        driver.findElement(By.cssSelector("input[name=email]")).sendKeys(email);
+        driver.findElement(By.cssSelector("input[name=phone]")).sendKeys("+19876543210");
+        driver.findElement(By.cssSelector("input[name=password]")).sendKeys("password");
+        driver.findElement(By.cssSelector("input[name=confirmed_password]")).sendKeys("password");
+
         driver.findElement(By.cssSelector("button[type=submit]")).click();
         driver.findElement(By.cssSelector("a[href $= logout]")).click();
-        driver.findElement(By.cssSelector("input[type=text]")).sendKeys(email, Keys.TAB, "password", Keys.ENTER);
+        driver.findElement(By.cssSelector("input[name=email]")).sendKeys(email);
+        driver.findElement(By.cssSelector("input[name=password]")).sendKeys("password", Keys.ENTER);
         driver.findElement(By.cssSelector("a[href $= logout]")).click();
     }
 
