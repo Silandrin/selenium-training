@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by aataushk on 02.03.2017.
  */
-public class AdminPage {
+public class Exercise7 {
 
     private WebDriver driver;
 

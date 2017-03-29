@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 /**
  * Created by aataushk on 22.02.2017.
  */
-public class MyFirstTest {
+public class Exercise1 {
 
     private WebDriver driver;
 

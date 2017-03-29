@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 /**
  * Created by aataushk on 01.03.2017.
  */
-public class AdminLoginPage {
+public class Exercise3 {
 
     private WebDriver driver;
 
